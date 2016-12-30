@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>e-siat</title>
+		<link rel="stylesheet" href="assets/vendor/angular-material/angular-material.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/vendor/zmdi/css/material-design-iconic-font.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700,800" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body ng-app="app.e-siat" ng-controller="appCtrl as APP">
+		<div ng-include="'app/layout/header.html'"></div>
+		<div ng-view></div>
+	</body>
+	<!-- inject vendor js -->
+	<script src="assets/vendor/jquery/jquery-3.1.1.min.js"></script>
+	<script src="assets/vendor/angular/angular.min.js"></script>
+	<script src="assets/vendor/angular/angular-route.min.js"></script>
+	<script src="assets/vendor/angular-animate/angular-animate.min.js"></script>
+	<script src="assets/vendor/angular-aria/angular-aria.min.js"></script>
+	<script src="assets/vendor/angular-messages/angular-messages.min.js"></script>
+	<script src="assets/vendor/angular-material/angular-material.min.js"></script>
+	<!-- /inject vendor js -->
+
+
+	<!-- inject app js -->
+	<script src="app/app.js"></script>
+	<script src="app/app.route.js"></script>
+	<script src="app/services/common-service.js"></script>
+	<script src="app/services/database-factory.js"></script>
+	<script src="app/services/link-factory.js"></script>
+	<script src="app/services/parser-service.js"></script>
+	<script src="app/controllers/app-controller.js"></script>
+	<script src="app/controllers/servicios-controller.js"></script>
+	<script src="app/controllers/porque-controller.js"></script>
+	<script src="app/directives/directives.js"></script>
+	<script src="app/directives/prueba/ejemplo.js"></script>
+	<!-- /inject app js -->
+
+</html>

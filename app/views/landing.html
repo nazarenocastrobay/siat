@@ -1,0 +1,72 @@
+
+		 <section class="cartas" ng-controller="serviciosCtrl as servicios">
+		 		<div class="container">
+				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" >
+					<md-list-item ng-repeat="servicio in servicios.servicios" animar-servicios class="servicios-items" flex flex-xs=95>
+						<i class="{{servicio.icono}} servicios-items-icono md-accent"></i>
+						<h4>{{servicio.nombre}}</h4>
+						<div>
+							<p>{{servicio.descipcion.breve}}</p>
+								<md-button class="md-raised">Mas</md-button>
+						</div>
+					</md-list-item>
+				</md-list>
+				</div>
+		</section>
+		<section class="about">
+			<div class="container">
+			<md-content layout="row" layout-xs="column" layout-sm="column">
+				<img src="assets/img/about-siat.jpg" alt="" flex>
+				<div flex=50 flex-xs=95 flex-sm=40 class="about-parrafos">
+					<h6 class="subtitulos">Acerca de Siat</h6>
+					<h4 class="titulos">¿QUE ES SIAT?</h4>
+					<p>SISTEMA INTEGRAL DE ADHERENCIA TERAPÉUTICA es un ecosistema de tecnologías aplicada a las 5 dimensiones de exploración según la OMS con el objetivo de mejorar el grado de adherencia terapéutica de las diferentes enfermedades crónicas. <br> El uso de las TIC ha sido bien aceptado por médicos especialistas y también por los pacientes que padecen enfermedades crónicas para aumentar su seguimiento, interacción médico-paciente y generar un monitoreo con trazabilidad del tratamiento en tiempo real.</p>
+				</div>
+			</md-content>
+			</div>
+		</section>
+
+		<section class="porque" ng-controller="porqueCtrl as porque">
+		
+				<div class="encabezado">
+						<h6 class="subtitulos text-center">El porque</h6>
+						<h4 class="titulos text-center">PORQUE SIAT</h4>
+				</div>
+				
+				
+					<div class="md-whiteframe-8dp">
+					<md-content layout="row" layout-xs="column" layout-sm="column">
+						<div class="porque-img-izq" flex=50 flex-xs=100 flex-md=50 flex-sm=50></div>
+						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-xs=100 flex-md=50 flex-sm=50>
+							<h4 flex-offset=20 flex-offset-xs=25>PARA EL</h4>
+							<h1 flex-offset=20 class="titulo" flex-offset-xs=25>{{porque.porque[0].para | uppercase}}</h1>
+							<div class="porque-razon" ng-repeat="razones in porque.porque[0].razones" layout=row layout-padding flex-offset=5 layout-align="start center">
+								<div class="porque-razon-icono">
+									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
+								</div>
+								<div class="porque-razon-texto">
+									<h1>{{razones.razon | uppercase}}</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque faucibus massa, in viverra nunc.</p>
+								</div>
+							</div>
+						</div>
+					</md-content>
+					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top>
+						<div class="porque-img-der" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
+						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-order="-1" flex-order-sm="1" flex-order-xs="1" flex-xs=10 flex-md=50 flex-sm=50>
+							<h4 flex-offset=30 flex-offset-xs=25>PARA EL</h4>
+							<h1 flex-offset=30 class="titulo" flex-offset-xs=25>{{porque.porque[1].para | uppercase}}</h1>
+							<div class="porque-razon" ng-repeat="razones in porque.porque[1].razones" layout=row layout-padding flex-offset=15 flex-offset-xs=5 flex-offset-sm=5 layout-align="start center" >
+								<div class="porque-razon-icono">
+									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
+								</div>
+								<div class="porque-razon-texto">
+									<h1>{{razones.razon | uppercase}}</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque faucibus massa, in viverra nunc.</p>
+								</div>
+						</div>
+					</md-content>
+					</div>
+
+				
+		</section>
