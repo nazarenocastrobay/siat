@@ -64,7 +64,7 @@ button.demo-nav {
     margin-top: 130px;
 }
 .ng-carousel{
-  height: 650px;
+  height: 700px;
   background-color: black;
 }
 .ng-carousel slide {
@@ -115,7 +115,7 @@ footer .container md-content div a{
   left: 0 !important;
 }
 #titulo-footer-derecho::before{
-  left: 81% !important;
+  left: 0% !important;
 }
 .mapa-footer{
   padding-bottom: 2em;
@@ -147,6 +147,21 @@ footer .container md-content div a{
 }
 .powered p a{
   font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+
+
+.brochure{
+  position: fixed;
+  bottom: 5%;
+  right: 10%;
+}
+.brochure i{
+  color: white;
+  font-size: 1.2em;
+}
+.brochure .tool-tip{
+  color: white;
 }
 /*********************** LANDING ********************************/
 

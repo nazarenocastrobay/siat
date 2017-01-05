@@ -7,7 +7,9 @@
 						<h4>{{servicio.nombre}}</h4>
 						<div>
 							<p>{{servicio.descipcion.breve}}</p>
-								<md-button class="md-raised">Mas</md-button>
+							<md-button class="md-raised">
+      Custom Dialog
+    </md-button>
 						</div>
 					</md-list-item>
 				</md-list>
@@ -37,8 +39,8 @@
 					<md-content layout="row" layout-xs="column" layout-sm="column">
 						<div class="porque-img-izq" flex=50 flex-xs=100 flex-md=50 flex-sm=50></div>
 						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-xs=100 flex-md=50 flex-sm=50>
-							<h4 flex-offset=20 flex-offset-xs=25>PARA EL</h4>
-							<h1 flex-offset=20 class="titulo" flex-offset-xs=25>{{porque.porque[0].para | uppercase}}</h1>
+							<h4 flex-offset=20 flex-offset-xs=5>PARA EL</h4>
+							<h1 flex-offset=20 class="titulo" flex-offset-xs=5>{{porque.porque[0].para | uppercase}}</h1>
 							<div class="porque-razon" ng-repeat="razones in porque.porque[0].razones" layout=row layout-padding flex-offset=5 layout-align="start center">
 								<div class="porque-razon-icono">
 									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
@@ -53,8 +55,8 @@
 					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top>
 						<div class="porque-img-der" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
 						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-order="-1" flex-order-sm="1" flex-order-xs="1" flex-xs=10 flex-md=50 flex-sm=50>
-							<h4 flex-offset=30 flex-offset-xs=25>PARA EL</h4>
-							<h1 flex-offset=30 class="titulo" flex-offset-xs=25>{{porque.porque[1].para | uppercase}}</h1>
+							<h4 flex-offset=30 flex-offset-xs=5>PARA EL</h4>
+							<h1 flex-offset=30 class="titulo" flex-offset-xs=5>{{porque.porque[1].para | uppercase}}</h1>
 							<div class="porque-razon" ng-repeat="razones in porque.porque[1].razones" layout=row layout-padding flex-offset=15 flex-offset-xs=5 flex-offset-sm=5 layout-align="start center" >
 								<div class="porque-razon-icono">
 									<i class="{{razones.icono}} md-whiteframe-2dp"></i>

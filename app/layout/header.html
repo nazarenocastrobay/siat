@@ -1,15 +1,21 @@
       <header>
       <md-toolbar layout=row  layout-align="space-between center">
-          <h1>{{APP.header.title}}</h1>
+          <img src="{{APP.header.logo}}" style="width: 100px;" flex-offset=5 alt="{{APP.header.title}}"></img>
           <div layout=row layout-align="space-between" hide-xs>
               <md-button name="page1">Home</md-button>
               <md-button ng-click="goto('page2')" name="page2">About</md-button>
               <md-button ng-click="goto('page3')" name="page3">Services</md-button>
               <md-button ng-click="goto('page3')" name="page4">Contact</md-button>
           </div>
+
+                    <md-button ng-click="APP.toggleLeft()" class="zmdi zmdi-menu"  hide-gt-xs >
+                    </md-button>
+
+
+            </section>
       </md-toolbar>
        <!--  <div style="width: 50%; height: 350px;"> -->
-          <div ng-carousel ng-carousel-name="example-carousel1" ng-carousel-timer="3500" layout=row layout-align="center start " flex=50>
+          <div ng-carousel ng-carousel-name="example-carousel1" ng-carousel-timer="3500" layout=row layout-align="center start " flex=100 style="background-color: transparent;">
               <slidecontainer class="carousel-slides">
                   <slide class="carousel-example" >
                     <div layout=column layout-align="center start " flex-offset=10 >
@@ -23,6 +29,26 @@
                   <slide class="carousel-example">Slide 6</slide> -->
               </slidecontainer>
           </div>
-        <!-- </div> --> 
+        <!-- </div> -->
+        <md-sidenav class="md-sidenav-left" md-component-id="left"
+                          md-disable-backdrop md-whiteframe="4" style="position: fixed">
+
+                <md-toolbar class="md-theme-indigo">
+                  <h1 class="md-toolbar-tools">MENU</h1>
+                </md-toolbar>
+
+                <md-content layout-margin>
+                  <div layout=column layout-align="space-around">
+                    <md-button name="page1">Home</md-button>
+                    <md-button ng-click="goto('page2')" name="page2">About</md-button>
+                    <md-button ng-click="goto('page3')" name="page3">Services</md-button>
+                    <md-button ng-click="goto('page3')" name="page4">Contact</md-button>
+                </div>
+                  <md-button ng-click="APP.toggleLeft()" class="md-accent">
+                    CERRAR
+                  </md-button>
+                </md-content>
+
+              </md-sidenav> 
         </header>
         
