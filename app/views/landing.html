@@ -1,4 +1,4 @@
-
+		
 		 <section class="cartas" ng-controller="serviciosCtrl as servicios">
 		 		<div class="container">
 				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" >
@@ -33,7 +33,6 @@
 						<h4 class="titulos text-center">PORQUE SIAT</h4>
 				</div>
 				
-				
 					<div class="md-whiteframe-8dp">
 					<md-content layout="row" layout-xs="column" layout-sm="column">
 						<div class="porque-img-izq" flex=50 flex-xs=100 flex-md=50 flex-sm=50></div>
@@ -67,6 +66,43 @@
 						</div>
 					</md-content>
 					</div>
+		</section>
 
-				
+
+		<section class="contacto">
+				<div class="encabezado">
+						<h6 class="subtitulos text-center">ENTERATE DE MAS</h6>
+						<h4 class="titulos text-center">CONTACTANOS</h4>
+				</div>
+				<div class="container">
+					<div class="contactanos" layout=row layout-xs=column layout-align="center start" >
+						<div ng-include="'app/layout/contacto-formulario.html'" class="contact-form" flex=50 flex-xs=100></div>
+						<div class="mapa" flex=50 flex-xs=100 layout=column>
+							<h1 class="titulo">ENCONTRANOS EN GOOGLE MAPS</h1>
+							<h4 class="subtitulo">Nuestras oficinas</h1>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.6193958408885!2d-64.2567600848538!3d-31.34188268142906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329c1d53921a51%3A0xd329cd05ca81aeb6!2sRicardo+Rojas+6739%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1483536368166" width="500" height="250" frameborder="0" style="border:0; max-width: 100%" allowfullscreen></iframe>
+							<h1 class="informacion">Más Informacion</h1>
+							<div layout="row" >
+								<a class="button" href="tel:3516399189" flex=50 flex-xs=100>
+									<md-button layout="row">
+										<div class="icono"  layout-padding>
+											<i class="zmdi zmdi-phone"></i>
+										</div>
+										351-6399189
+									</md-button>
+								</a>
+								<a class="button" href="tel:3512098200" flex=50 flex-xs=100>
+									<md-button layout="row">
+										<div class="icono"  layout-padding>
+											<i class="zmdi zmdi-smartphone"></i>
+										</div>
+										351-2098200
+									</md-button>
+								</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+					
 		</section>

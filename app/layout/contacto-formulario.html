@@ -1,0 +1,47 @@
+<div ng-controller="contactCtrl as contact" layout="column" ng-cloak>
+
+			  <md-content layout-padding class="contact-form-contenido" flex>
+			    <form name="projectForm" md-theme="secondary" >
+
+			      <h1 class="titulo">ESCIBENOS!</h1>
+				  <h4 class="subtitulo">Completa el formulario</h4>
+			      <div layout="row">
+			        <md-input-container flex="50">
+			          <label>Nombre</label>
+			          <input required name="nombreCliente" ng-model="contact.nombreCliente">
+			          <div ng-messages="contact.nombreCliente.$error">
+			            <div ng-message="required">Requerido.</div>
+			          </div>
+			        </md-input-container>
+
+			        <md-input-container flex="50">
+			          <label>Apellido</label>
+			          <input required name="apellidoCliente" ng-model="contact.apellidoCliente">
+			          <div ng-messages="contact.apellidoCliente.$error">
+			            <div ng-message="required">Requerido.</div>
+			          </div>
+			        </md-input-container>
+			        </div>
+
+					<md-input-container class="md-block">
+				        <label>Email</label>
+				        <input required type="email" name="emailCliente" ng-model="contact.emailCliente"
+				               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+				        <div ng-messages="contact.emailCliente.$error" role="alert">
+				          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+				            El email ingresado debe tener entre 10 y 100 caracteres de largo y llevar una @.
+				          </div>
+				        </div>
+				      </md-input-container>
+			      <md-input-container class="md-block">
+			          <label>Mensaje</label>
+			          <textarea ng-model="contact.mensaje" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+			        </md-input-container>
+
+					<md-button type="submit">Enviar</md-button>
+			      </div>
+			    </form>
+			  </md-content>
+
+			</div>

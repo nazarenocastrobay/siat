@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.e-siat', ['ngRoute','ngMaterial'])
+    angular.module('app.e-siat', ['ngRoute','ngMaterial', 'angular-carousel'])
     .controller('appCtrl', function (){
 		
 	})
@@ -69,13 +69,46 @@
       'A700': 'f1f2f2',
       'contrastDefaultColor': 'dark'
     });
-
+    $mdThemingProvider.definePalette('blue-custom', {
+      '50': '096e9c',
+      '100': '096e9c',
+      '200': '096e9c',
+      '300': '096e9c',
+      '400': '096e9c',
+      '500': '096e9c',
+      '600': '096e9c',
+      '700': '096e9c',
+      '800': '096e9c',
+      '900': '096e9c',
+      'A100': '096e9c',
+      'A200': '096e9c',
+      'A400': '096e9c',
+      'A700': '096e9c',
+      'contrastDefaultColor': 'dark'
+    });
+    $mdThemingProvider.definePalette('red-custom', {
+      '50': 'C62828',
+      '100': 'C62828',
+      '200': 'C62828',
+      '300': 'C62828',
+      '400': 'C62828',
+      '500': 'C62828',
+      '600': 'C62828',
+      '700': 'C62828',
+      '800': 'C62828',
+      '900': 'C62828',
+      'A100': 'C62828',
+      'A200': 'C62828',
+      'A400': 'C62828',
+      'A700': 'C62828',
+      'contrastDefaultColor': 'dark'
+    });
     $mdThemingProvider.theme('default')
       .primaryPalette('white')
-      .accentPalette('indigo');
+      .accentPalette('blue-custom');
 
     $mdThemingProvider.theme('secondary')
-      .primaryPalette('indigo');  
+      .primaryPalette('blue-custom');
 
     $mdThemingProvider.theme('dark').dark();      
 

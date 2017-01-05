@@ -1,0 +1,28 @@
+<footer ng-controller="footerCtrl as footer" >
+	<div class="container">
+		<md-content layout=row layout-align="space-between start" layout-xs=column class="footer-content">
+			<div class="mas-about" flex=50 layout=column layout-align="start start" flex-xs=100>
+				<h1 class="titulos" id="titulo-footer">MAS SOBRE SIAT</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices est libero, eu condimentum turpis luctus et. Vestibulum viverra accumsan.</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.6193958408885!2d-64.2567600848538!3d-31.34188268142906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329c1d53921a51%3A0xd329cd05ca81aeb6!2sRicardo+Rojas+6739%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1483620649522" width="500" height="200" frameborder="0" style="border:0; max-width: 100%" allowfullscreen class="mapa-footer"></iframe>
+			</div>
+			<div class="direcciones" flex=50 layout=column layout-align="start end" flex-xs=100>
+				<h1 class="titulos" id="titulo-footer-derecho">MANTENETE CONTACTADO</h1>
+				<md-list>
+					<md-list-item ng-repeat="contacto in footer.direcciones" class="lista-direc">
+					    <a href="{{contacto.href}}" layout="row" layout-align="center center">
+					      <div layout-padding>
+					      	<i class="{{contacto.icono}}"></i>
+					      </div>
+					      {{contacto.valor}}
+					    </a>
+					  </md-list-item>
+				 </md-list>
+			</div>
+		</md-content>
+		<md-content layout=row layout-align="space-around center" class="powered">
+			<p>2016<sup>&copy;</sup>  Powered by <a href="www.oixxio.net">OIXXIO</a></p>
+			  
+		</md-content>
+	</div>
+</footer>

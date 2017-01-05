@@ -41,9 +41,8 @@
   .text-center{
       text-align: center;
     }
-  /****************HEADER*************/
+/****************HEADER*************/
   header{
-    height: 800px;
     background: url('../img/bg-header.jpg') center center no-repeat;
     background-size: cover;
   }
@@ -58,6 +57,97 @@
     border-bottom: none !important;
     
   }
+
+
+/**********SLIDER**********/
+button.demo-nav {
+    margin-top: 130px;
+}
+.ng-carousel{
+  height: 650px;
+  background-color: black;
+}
+.ng-carousel slide {
+    background-color: transparent;
+}
+.ng-carousel slide h6{
+    text-align: center;
+    font-size: 4rem;
+    color: #bbb;
+}
+.ng-carousel slide h4{
+    text-align: center;
+    font-size: 8rem;
+    color: #bbb;
+}
+.ng-carousel slide.empty {
+    background: none;
+}
+.ng-carousel slide div{
+    height: inherit;
+}
+
+.ng-carousel slide:not(.empty):nth-child(odd) {
+  background-color: transparent;
+  color: #ccc;
+}
+
+/****************FOOTER*************/
+footer{
+  background-color:#247092;
+  padding-top: 3em;
+}
+footer .container,
+footer .container md-content{
+  background-color: #247092;
+}
+footer .container md-content div h1{
+  padding-top: .2em;
+}
+
+footer .container md-content div h1,
+footer .container md-content div p,
+footer .container md-content div a{
+  color: white;
+  border-bottom: none;
+}
+#titulo-footer::before{
+  left: 0 !important;
+}
+#titulo-footer-derecho::before{
+  left: 81% !important;
+}
+.mapa-footer{
+  padding-bottom: 2em;
+}
+.mas-about p{
+  font-size: .9em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.lista-direc a{
+  font-size: .9em;
+ font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.lista-direc a div i{
+    background: #ffffff;
+    border-radius: 50%;
+    color: #38a2d2;
+    font-size: 16px;
+    height: 30px;
+    line-height: 16px;
+    text-align: center;
+    width: 30px;
+}
+/*argin*/
+.powered p{
+  color: white;
+  padding-top: .5em;
+  font-size: .7em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.powered p a{
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
 /*********************** LANDING ********************************/
 
 
@@ -145,7 +235,17 @@
   border-bottom: 1px solid #ddd;
   padding-bottom: .3em;
   font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+  position: relative;
 
+}
+.titulos::before{
+      background: #ddd;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: calc(50% - 35px);
+    position: absolute;
+    width: 70px;
 }
 .subtitulos{
   font-size: 1em;
@@ -207,6 +307,7 @@
   font-family: 'Merriweather',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
   color: #39687d;
   margin-bottom: 0px;
+  padding-top: 3em;
 }
 .porque-razon .porque-razon-icono i{
     background: #ffffff;
@@ -229,3 +330,82 @@
     color: white;
      font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
 }
+.contacto{
+ 
+}
+.contacto .encabezado{
+  padding-top: 8em;
+  padding-bottom: 7em;
+  background-color: #f2f2f2;
+}
+.contacto .encabezado h6{
+  margin-bottom: .4em;
+}
+.contacto .encabezado h4{
+  border-bottom: none;
+}
+.contacto .encabezado .titulos::before{
+      background: #fff;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: calc(50% - 35px);
+    position: absolute;
+    width: 70px;
+}
+.contact-form-contenido{
+  border-radius: 10px;
+  padding: 0 3em 1em 0;
+}
+.contact-form-contenido .titulo{
+  font-size: 2.4em;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+     font-weight: bold; 
+     padding-top: 0px;
+     margin-top: 0px;
+}
+.contact-form-contenido .subtitulo{
+    font-size: 1.1em;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+     font-weight: bold; 
+     margin: 0px;
+     margin-top: -5px;
+     padding: 0px;
+     color: rgba(56, 162, 210, 0.9);
+     font-style: italic;
+     padding-bottom: .5em;
+}
+
+.contacto .container{
+  padding-top: 3em;
+}
+.mapa .titulo{
+   font-size: 2.3em;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+     font-weight: bold; 
+     padding-top: 0px;
+     margin-top: 0px;
+     color: #272727;
+}
+.mapa .subtitulo{
+   font-size: 1.1em;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+     font-weight: bold; 
+     margin: 0px;
+     margin-top: -5px;
+     padding: 0px;
+     color: rgba(56, 162, 210, 0.9);
+     font-style: italic;
+     padding-bottom: 1.7em;
+}
+.mapa .informacion{
+   font-size: 1.1em;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+     font-weight: bold; 
+     margin: 0px;
+     color: rgba(56, 162, 210, 0.9);
+     font-style: italic;
+     padding-bottom: 1.7em;
+     margin-top: 1.7em;
+}
+

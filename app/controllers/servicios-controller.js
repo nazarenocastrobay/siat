@@ -2,8 +2,8 @@
     'use strict';
     angular.module('app.e-siat')
     .controller('serviciosCtrl', function(){
-    	var self = this;
-    	self.servicios = servicios;
+        var self = this;
+        self.servicios = servicios;
     });
     var servicios = [
             {
