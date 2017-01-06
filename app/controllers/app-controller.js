@@ -13,9 +13,7 @@
 		//Funcion general de navegacion entre views
 		self.goTo = function (data) {
 			$location.path('/'+data);
-		}
-    $location.path('/');
-    
+		} 
         self.toggleLeft = buildToggler('left');
         self.toggleRight = buildToggler('right');
 
@@ -27,5 +25,14 @@
             });
           }
         }
+
+    //Animar el scroll entre secciones
+    self.scrollTo = function(section){
+            $('html, body').animate({scrollTop:$(section).position().top}, 1000);
+            console.log(section);
+
       };
+
+    $location.path('/');
+    }
 })();

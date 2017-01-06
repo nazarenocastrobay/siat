@@ -46,6 +46,9 @@
     background: url('../img/bg-header.jpg') center center no-repeat;
     background-size: cover;
   }
+  md-toolbar{
+    transition: all .4s ease-in-out;
+  }
   md-toolbar > h1 {
     margin-left: 2em;
   }
@@ -58,6 +61,10 @@
     
   }
 
+  .fixed{
+    position: fixed !important;
+
+  }
 
 /**********SLIDER**********/
 button.demo-nav {

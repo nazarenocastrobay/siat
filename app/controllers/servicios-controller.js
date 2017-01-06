@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('app.e-siat')
-    .controller('serviciosCtrl', function($mdDialog){
+    .controller('serviciosCtrl', function(){
         var self = this;
         self.servicios = servicios;
 

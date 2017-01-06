@@ -1,21 +1,22 @@
 		
-		 <section class="cartas" ng-controller="serviciosCtrl as servicios">
+		 <section class="cartas" ng-controller="serviciosCtrl as servicios" id="cartas">
 		 		<div class="container">
 				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" >
 					<md-list-item ng-repeat="servicio in servicios.servicios" animar-servicios class="servicios-items" flex flex-xs=95>
 						<i class="{{servicio.icono}} servicios-items-icono md-accent"></i>
 						<h4>{{servicio.nombre}}</h4>
-						<div>
-							<p>{{servicio.descipcion.breve}}</p>
-							<md-button class="md-raised">
-      Custom Dialog
-    </md-button>
+						<div ng-controller="modalesCtrl as modales" layout=column layout-align="start center">
+						<md-button class="md-primary md-raised" ng-click="modales.showAdvanced($event)" style="z-index: 1;" id="boton-servicio">
+							      Custom Dialog
+							    </md-button>
+							<p flex-order="-1">{{servicio.descipcion.breve}}</p>
+								
 						</div>
 					</md-list-item>
 				</md-list>
 				</div>
 		</section>
-		<section class="about">
+		<section class="about" id="about">
 			<div class="container">
 			<md-content layout="row" layout-xs="column" layout-sm="column">
 				<img src="assets/img/about-siat.jpg" alt="" flex>
@@ -28,13 +29,12 @@
 			</div>
 		</section>
 
-		<section class="porque" ng-controller="porqueCtrl as porque">
+		<section class="porque" ng-controller="porqueCtrl as porque" id="porque">
 		
 				<div class="encabezado">
 						<h6 class="subtitulos text-center">El porque</h6>
 						<h4 class="titulos text-center">PORQUE SIAT</h4>
 				</div>
-				
 					<div class="md-whiteframe-8dp">
 					<md-content layout="row" layout-xs="column" layout-sm="column">
 						<div class="porque-img-izq" flex=50 flex-xs=100 flex-md=50 flex-sm=50></div>
@@ -52,6 +52,7 @@
 							</div>
 						</div>
 					</md-content>
+					</div>
 					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top>
 						<div class="porque-img-der" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
 						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-order="-1" flex-order-sm="1" flex-order-xs="1" flex-xs=10 flex-md=50 flex-sm=50>
@@ -71,7 +72,7 @@
 		</section>
 
 
-		<section class="contacto">
+		<section class="contacto" id="contacto">
 				<div class="encabezado">
 						<h6 class="subtitulos text-center">ENTERATE DE MAS</h6>
 						<h4 class="titulos text-center">CONTACTANOS</h4>

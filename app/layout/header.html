@@ -1,11 +1,11 @@
-      <header>
-      <md-toolbar layout=row  layout-align="space-between center">
+      <header  id="home">
+      <md-toolbar layout=row  layout-align="space-between center" id="toolbar">
           <img src="{{APP.header.logo}}" style="width: 100px;" flex-offset=5 alt="{{APP.header.title}}"></img>
           <div layout=row layout-align="space-between" hide-xs>
-              <md-button name="page1">Home</md-button>
-              <md-button ng-click="goto('page2')" name="page2">About</md-button>
-              <md-button ng-click="goto('page3')" name="page3">Services</md-button>
-              <md-button ng-click="goto('page3')" name="page4">Contact</md-button>
+              <md-button ng-click="APP.scrollTo('#home')" name="home">Home</md-button>
+              <md-button ng-click="APP.scrollTo('#cartas')" name="cartas">About</md-button>
+              <md-button ng-click="APP.scrollTo('#porque')" name="porque">Porque</md-button>
+              <md-button ng-click="APP.scrollTo('#contacto')" name="contacto">Contact</md-button>
           </div>
 
                     <md-button ng-click="APP.toggleLeft()" class="zmdi zmdi-menu"  hide-gt-xs >
