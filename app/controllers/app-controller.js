@@ -1,7 +1,7 @@
 (function () {
     'use strict';
-    angular.module('app.e-siat').controller('appCtrl', appCtrl);
-    function appCtrl ($location, $timeout, linkFactory, $scope, $log, $mdSidenav ){
+    angular.module('app.e-siat').controller('appCtrl', appCtrl).value('duScrollOffset', 55);
+    function appCtrl ($location, $timeout, linkFactory, $scope, $log, $mdSidenav, $document ){
     	
     	var self = this;
 
@@ -14,6 +14,8 @@
 		self.goTo = function (data) {
 			$location.path('/'+data);
 		} 
+
+        //Side Nav Button
         self.toggleLeft = buildToggler('left');
         self.toggleRight = buildToggler('right');
 
@@ -26,13 +28,24 @@
           }
         }
 
-    //Animar el scroll entre secciones
+    //Animar el scroll entre secciones (scrollspy)
     self.scrollTo = function(section){
-            $('html, body').animate({scrollTop:$(section).position().top}, 1000);
-            console.log(section);
-
-      };
+            var self = this;
+            var seccion = angular.element(document.getElementById(section));
+              $document.scrollToElementAnimated(seccion);
+          };
+    self.scrollToSidenav = function(section){
+            var self = this;
+            var seccion = angular.element(document.getElementById(section));
+              $document.scrollToElementAnimated(seccion);
+              //Cerrar sidenav cuando se elige la seccion en celulares
+              $mdSidenav('left').toggle()
+          };
 
     $location.path('/');
-    }
+      }
+
+
+    
+    
 })();

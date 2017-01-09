@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.e-siat', ['ngRoute','ngMaterial', 'angular-carousel'])
+    angular.module('app.e-siat', ['ngRoute','ngMaterial', 'angular-carousel', 'duScroll'])
     .controller('appCtrl', function (){
 		
 	})

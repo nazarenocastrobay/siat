@@ -188,7 +188,7 @@ footer .container md-content div a{
     text-align: center;
     position:relative;
     height: 250px;
-    transition: all .2s ease-out;
+    transition: all .4s ease-out;
     overflow: hidden;
   }
   .servicios-items h4 {
@@ -201,13 +201,16 @@ footer .container md-content div a{
     background: #40c4ff;
     border-radius: 0 0 30px 30px;
     color: #fff;
-    font-size: 23px !important;
+    font-size: 23px;
     height: 125px;
-    line-height: 203px !important;
+    line-height: 203px;
     margin-bottom: 10px;
     text-align: center;
     width: 48px;
     margin-bottom: 30px;
+    transition: all .4s  ease-out;
+
+
   }
   .servicios-items div{
     top: 100%;
@@ -222,17 +225,24 @@ footer .container md-content div a{
     color: white;
     font-family: helvetica;
   }
- .hover-service{
+ .servicios-items i{
     background: #fff;
     color: #40c4ff;
-    -webkit-transform: scale(.7) translateY(-43px);
-    -moz-transform: scale(.7) translateY(-43px);
-    -o-transform: scale(.7) translateY(-43px);
-    -ms-transform: scale(.7) translateY(-43px);
-    -webkit-transition: .4s all cubic-bezier(.2,-0.2,.84,1.25);
-    -moz-transition: .4s all cubic-bezier(.2,-0.2,.84,1.25);
-    -o-transition: .4s all cubic-bezier(.2,-0.2,.84,1.25);
-    -ms-transition: .4s all cubic-bezier(.2,-0.2,.84,1.25);
+    height: 61px;
+    width: 35px;
+    line-height: 68px;
+    margin-bottom: 16px;
+    font-size: 17.5px;
+    padding-top: 10px;
+ }
+ .servicios-items h4{
+    color: white;
+ }
+ .servicios-items{
+    background-color: #40c4ff;
+ }
+ .servicios-items div{
+  top: 44%;
  }
 
 /****************ABOUT SIAT*************/
