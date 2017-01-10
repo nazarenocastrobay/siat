@@ -1,26 +1,26 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Mango (Fruit)" flex=50 flex-xs=80>
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>{{modal.nombre}}</h2>
         <span flex></span>
-        <!-- <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
-        </md-button> -->
+        <md-button class="md-icon-button" ng-click="modal.cancel()">
+          <i class="zmdi zmdi-close" style="color: white; font-size: 1.5em;" aria-label="close dialog"></i>
+        </md-button>
       </div>
     </md-toolbar>
 
     <md-dialog-content>
       <div class="md-dialog-content">
-        <h2>blabla</h2>
+        <h2>{{modal.titulo}}</h2>
         <p>
           {{modal.descripcion}}
       </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
-        More on Wikipedia
+      <md-button ng-click="modal.cancel()">
+        CERRAR
       </md-button>
       <span flex></span>
       <!-- <md-button ng-click="answer('not useful')">

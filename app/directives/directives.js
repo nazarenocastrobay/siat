@@ -22,5 +22,23 @@
         }
 
     }
+}).directive("brochure-aparece", function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+           $(window).scroll(function (){
+                var wScroll = $(this).scrollTop();
+                if(wScroll > 870){
+                    $('.icono-brochure').addClass('brochure-aparece');
+                } else{
+                    $('.icono-brochure').removeClass('brochure-aparece');
+                }
+                console.log(Wscroll);
+           });
+            
+
+        }
+
+    }
 })
 })();

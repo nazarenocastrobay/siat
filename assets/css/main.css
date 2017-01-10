@@ -31,7 +31,7 @@
 
     body,h1,h2,h3,h4,h5,h6,p,b, div{
         font-family: 'Gotham',"Helvetica Neue","Helvetica","Arial",sans-serif;
-        color: #626262;
+        
     }
 
 /*********************** GENERAL ********************************/
@@ -41,13 +41,24 @@
   .text-center{
       text-align: center;
     }
+  #icono-brochure{
+    transition: all .3s ease-in-out;
+
+  }
+  .icono-brochure{
+    position: none;
+    display: none;
+  }
+    
 /****************HEADER*************/
   header{
-    background: url('../img/bg-header.jpg') center center no-repeat;
+    background: url('../img/bg-background.png') center center no-repeat;
     background-size: cover;
+    height: 850px;
   }
   md-toolbar{
     transition: all .4s ease-in-out;
+    background-color: transparent !important;
   }
   md-toolbar > h1 {
     margin-left: 2em;
@@ -60,19 +71,50 @@
     border-bottom: none !important;
     
   }
-
+  .navbar-header button{
+    color: white !important;
+  }
   .fixed{
     position: fixed !important;
+    background-color: white !important;
+    
 
   }
-
+  .fixed button{
+    color: #626262 !important;
+  }
+  .md-toolbar-tools{
+    background-color: #0fa5b8;
+  }
+  .md-toolbar-tools h2{
+    color: white;
+    font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+  
+  .md-dialog-content h2{
+    font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .menu-title{
+    color: #636363;
+    font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 /**********SLIDER**********/
 button.demo-nav {
     margin-top: 130px;
 }
 .ng-carousel{
-  height: 700px;
+  height: 100%;
   background-color: black;
+
 }
 .ng-carousel slide {
     background-color: transparent;
@@ -98,15 +140,30 @@ button.demo-nav {
   background-color: transparent;
   color: #ccc;
 }
-
+.carousel-example div h6,
+.carousel-example div h4{
+  color: white;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.carousel-example div h6{
+  font-size: 2.4em;
+  margin-bottom: -20px;
+}
+.carousel-example div h4{
+  font-size: 8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 /****************FOOTER*************/
 footer{
-  background-color:#247092;
+  background-color:#084f58;
   padding-top: 3em;
 }
 footer .container,
 footer .container md-content{
-  background-color: #247092;
+  background-color: #084f58;
 }
 footer .container md-content div h1{
   padding-top: .2em;
@@ -138,7 +195,7 @@ footer .container md-content div a{
 .lista-direc a div i{
     background: #ffffff;
     border-radius: 50%;
-    color: #38a2d2;
+    color: #084f58;
     font-size: 16px;
     height: 30px;
     line-height: 16px;
@@ -192,13 +249,14 @@ footer .container md-content div a{
     overflow: hidden;
   }
   .servicios-items h4 {
-     font-family: 'Roboto' !important;
      text-transform: uppercase;
      color: black;
      transition: all .4s ease-out;
+     font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
+     font-weight: bold;
   }
   .servicios-items-icono{
-    background: #40c4ff;
+    background: #0fa5b8;
     border-radius: 0 0 30px 30px;
     color: #fff;
     font-size: 23px;
@@ -224,10 +282,11 @@ footer .container md-content div a{
   .servicios-items div p{
     color: white;
     font-family: helvetica;
+    margin-top: 10px;
   }
- .servicios-items i{
+ .servicios-items:hover i{
     background: #fff;
-    color: #40c4ff;
+    color: #0fa5b8;
     height: 61px;
     width: 35px;
     line-height: 68px;
@@ -235,13 +294,13 @@ footer .container md-content div a{
     font-size: 17.5px;
     padding-top: 10px;
  }
- .servicios-items h4{
+ .servicios-items:hover h4{
     color: white;
  }
- .servicios-items{
-    background-color: #40c4ff;
+ .servicios-items:hover{
+    background-color: #0fa5b8;
  }
- .servicios-items div{
+ .servicios-items:hover div{
   top: 44%;
  }
 
@@ -312,7 +371,7 @@ footer .container md-content div a{
   padding-bottom: 3em;
 }
 .porque md-content{
-  background-color: #38a2d2;
+  background-color: #0fa5b8;
 }
 .porque-img-izq{
   background: url('../img/porque-paciente.jpg') center center no-repeat;
@@ -344,7 +403,7 @@ footer .container md-content div a{
 .porque-razon .porque-razon-icono i{
     background: #ffffff;
     border-radius: 50%;
-    color: #38a2d2;
+    color: #0fa5b8;
     font-size: 34px;
     height: 70px;
     line-height: 70px;

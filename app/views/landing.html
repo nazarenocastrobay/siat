@@ -1,4 +1,13 @@
-		
+		<md-button class="md-fab icono-brochure" aria-label="Insert Drive" href="http://e-siat.net/Siat_Sistema_Integral_de_Adherencia_Terapeutica.pdf" target="_blank" id="icono-brochure">
+		  <i class="zmdi zmdi-file" style="font-size: 2.5em;
+										   color: white;
+										   line-height: 68px"></i>
+          <md-tooltip md-visible="demo.showTooltip" md-direction="{{demo.tipDirection}}" style="color: white">
+            Brochure
+          </md-tooltip>
+        </md-button>
+
+
 		 <section class="cartas" ng-controller="serviciosCtrl as servicios" id="cartas">
 		 		<div class="container">
 				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" >
@@ -7,7 +16,7 @@
 						<h4>{{servicio.nombre}}</h4>
 						<div  layout=column layout-align="start center">
 						<md-button class="md-primary md-raised" ng-click="servicios.showAdvanced($index)" style="z-index: 1;" id="boton-servicio">
-							      {{$index}}
+							      MAS
 							    </md-button>
 							<p flex-order="-1">{{servicio.descripcion.breve}}</p>
 						</div>
