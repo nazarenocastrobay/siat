@@ -49,12 +49,26 @@
     position: none;
     display: none;
   }
+  #icono-scrolltop{
+    transition: all .3s ease-in-out;
+    background-color: white;
+    position: absolute;
+    top: -35px; left: 44%;
+    z-index: 0;
+  }
+  #icono-scrolltop i{
+    transition: all .3s ease-in-out;
+  }
+  #icono-scrolltop:hover i{
+    color: #2cc1bf !important;
+
+  }
     
 /****************HEADER*************/
   header{
     background: url('../img/bg-background.png') center center no-repeat;
     background-size: cover;
-    height: 850px;
+    height: 780px;
   }
   md-toolbar{
     transition: all .4s ease-in-out;
@@ -118,6 +132,7 @@ button.demo-nav {
 }
 .ng-carousel slide {
     background-color: transparent;
+   
 }
 .ng-carousel slide h6{
     text-align: center;
@@ -159,7 +174,8 @@ button.demo-nav {
 /****************FOOTER*************/
 footer{
   background-color:#084f58;
-  padding-top: 3em;
+  padding-top: 9em;
+  margin-top: 5em;
 }
 footer .container,
 footer .container md-content{
@@ -351,6 +367,62 @@ footer .container md-content div a{
   line-height: 26px;
 }
 
+
+
+
+.adherencia{
+  background-color: #0fa5b8;
+  margin-top: 4em;
+  padding-top: 2em;
+  padding-bottom: .5em;
+}
+
+.adherencia .titulo{
+  font-weight: 700;
+  font-size: 2em;
+  color: white;
+  margin-top: 0px;
+  padding-bottom: .3em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+  position: relative;
+}
+.adherencia .titulo::before{
+    background: #ddd;
+    bottom: 0;
+    content: "";
+    height: 1.5px;
+    left: 0;
+    position: absolute;
+    width: 70px;
+}
+.adherencia .subtitulo{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: 'Merriweather',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+  color: #adadad;
+  margin-bottom: 0px;
+  color: rgba(255,255,255,.6);
+}
+.adherencia .parrafo{
+  font-size: 1.4em;
+  color: rgb(220,220,220);
+  margin-top: 0px;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+}
+.adherencia .cita{
+  font-size: 1.4em;
+  color: rgb(220,220,220);
+  margin-top: -5px;
+  padding-bottom: .3em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+  text-align: right;
+}
+
+
+
+
+
 /****************PORQUE SIAT*************/
 .porque{
   background-color: #096e9c;
@@ -462,7 +534,7 @@ footer .container md-content div a{
      margin: 0px;
      margin-top: -5px;
      padding: 0px;
-     color: rgba(56, 162, 210, 0.9);
+     color: #0fa5b8;
      font-style: italic;
      padding-bottom: .5em;
 }
@@ -485,7 +557,7 @@ footer .container md-content div a{
      margin: 0px;
      margin-top: -5px;
      padding: 0px;
-     color: rgba(56, 162, 210, 0.9);
+     color: #0fa5b8;
      font-style: italic;
      padding-bottom: 1.7em;
 }
@@ -494,7 +566,7 @@ footer .container md-content div a{
      font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
      font-weight: bold; 
      margin: 0px;
-     color: rgba(56, 162, 210, 0.9);
+     color: #0fa5b8;
      font-style: italic;
      padding-bottom: 1.7em;
      margin-top: 1.7em;

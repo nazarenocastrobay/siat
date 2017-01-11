@@ -27,20 +27,27 @@
             });
           }
         }
+    //**********SCROLLING***********************//
+      //Animar el scroll entre secciones (scrollspy)
+      self.scrollTo = function(section){
+              var self = this;
+              var seccion = angular.element(document.getElementById(section));
+                $document.scrollToElementAnimated(seccion);
+            };
+      self.scrollToSidenav = function(section){
+              var self = this;
+              var seccion = angular.element(document.getElementById(section));
+                $document.scrollToElementAnimated(seccion);
+                //Cerrar sidenav cuando se elige la seccion en celulares
+                $mdSidenav('left').toggle()
+            };
+      //Animar el ScrollTop
+      self.scrollTop = function (){
+              var top = 0;
+              var duration = 1500;
+              $document.scrollTopAnimated(top, duration);
+      };
 
-    //Animar el scroll entre secciones (scrollspy)
-    self.scrollTo = function(section){
-            var self = this;
-            var seccion = angular.element(document.getElementById(section));
-              $document.scrollToElementAnimated(seccion);
-          };
-    self.scrollToSidenav = function(section){
-            var self = this;
-            var seccion = angular.element(document.getElementById(section));
-              $document.scrollToElementAnimated(seccion);
-              //Cerrar sidenav cuando se elige la seccion en celulares
-              $mdSidenav('left').toggle()
-          };
 
     $location.path('/');
       }
