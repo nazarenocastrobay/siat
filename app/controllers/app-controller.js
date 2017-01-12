@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('app.e-siat').controller('appCtrl', appCtrl).value('duScrollOffset', 55);
-    function appCtrl ($location, $timeout, linkFactory, $scope, $log, $mdSidenav, $document ){
+    function appCtrl ($location, $timeout, linkFactory, $scope, $log, $mdSidenav, $document, $interval ){
     	
     	var self = this;
 
@@ -48,6 +48,21 @@
               $document.scrollTopAnimated(top, duration);
       };
 
+
+
+      self.activated = true;
+      self.determinateValue = 0;
+
+      // Iterate every 100ms, non-stop and increment
+      // the Determinate loader.
+      $interval(function() {
+
+        self.determinateValue += 1;
+        if (self.determinateValue > 100) {
+          self.determinateValue = 0;
+        }
+
+      }, 100);
 
     $location.path('/');
       }

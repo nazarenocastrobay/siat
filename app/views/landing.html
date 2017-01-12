@@ -1,3 +1,9 @@
+		<!-- <div layout="row" layout-sm="column" layout-align="space-around" style="background-color: black">
+      		<md-progress-circular md-mode="determinate" value="{{APP.determinateValue}}"  md-diameter=200></md-progress-circular>
+
+
+    	</div> -->
+
 		<md-button class="md-fab icono-brochure" aria-label="Insert Drive" href="http://e-siat.net/Siat_Sistema_Integral_de_Adherencia_Terapeutica.pdf" target="_blank" id="icono-brochure">
 		  <i class="zmdi zmdi-file" style="font-size: 2.5em;
 										   color: white;
@@ -95,7 +101,87 @@
 					</md-content>
 					</div>
 		</section>
+		<md-content class="cita" >
+			<div class="container" layout=row layout-xs=column layout-align="center center">
+			<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" flex=25 flex-md=35 flex-xs=10  style="border-radius: 50%;">
+				<img src="assets/img/foto-miquel.jpg"  style="border-radius: 50%">
+		     </md-card>
+			<div flex style="padding-left: 1em;">
+					<h2 class="subtitulo">CITA</h2>
+					<h1 class="titulo">DR MIQUEL RIBERA PIBERNAT</h1>
+				<div layout="row" layout-xs=column flex-sm=100>
+					<div  flex>
+					<p class="parrafo">“Los pacientes que aceptan su enfermedad, que entienden su carácter crónico y que están mejor informados, son los mejores pacientes y obtienen mayores  beneficios del tratamiento, ya que tienen una buena adherencia y aprenden a cuidarse y a convivir con su enfermedad lo que hace que se logre un mayor entendimiento con el médico y que se produzca un diálogo inteligente para conseguir mejores resultados”.</p>
+					</div>
+						<div hide show-sm show-xs>
+						<i class="zmdi zmdi-quote" style="font-size: 10em; color: rgba(162, 162, 162, 0.8); text-align: right;"></i>
+						</div>
+				</div>
 
+			</div>
+		</div>
+		</md-content>
+
+		<section class="apps">
+				<div class="encabezado">
+						<h6 class="subtitulos text-center">NUESTRAS</h6>
+						<h4 class="titulos text-center">APPS</h4>
+				</div>
+				<div class="container">
+					<md-grid-list
+				        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="3"
+				        md-row-height-gt-md="4:2" md-row-height="2:2"
+				        md-gutter="12px" md-gutter-gt-sm="8px" >
+
+				    <md-grid-tile class="gray"
+				        md-rowspan="2" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+				      <md-grid-tile-footer>
+				        <h3>#1: (3r x 2c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				    <md-grid-tile class="green" md-rowspan="1">
+				      <md-grid-tile-footer>
+				        <h3>#2: (1r x 1c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				    <md-grid-tile class="yellow" md-rowspan="2">
+				      <md-grid-tile-footer>
+				        <h3>#3: (1r x 1c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				    <md-grid-tile class="blue"
+				        md-rowspan="1.5">
+				      <md-grid-tile-footer>
+				        <h3>#4: (2r x 1c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				    <md-grid-tile class="red"
+				        md-rowspan="2" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+				      <md-grid-tile-footer>
+				        <h3>#5: (2r x 2c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				    <md-grid-tile class="green"
+				        md-rowspan="2" >
+				      <md-grid-tile-footer>
+				        <h3>#6: (2r x 1c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+				    <md-grid-tile class="green"
+				        md-rowspan="2" >
+				      <md-grid-tile-footer>
+				        <h3>#7: (2r x 1c)</h3>
+				      </md-grid-tile-footer>
+				    </md-grid-tile>
+
+				  </md-grid-list>
+			  </div>
+		</section>
 
 		<section class="contacto" id="contacto">
 				<div class="encabezado">
@@ -105,7 +191,7 @@
 				<div class="container">
 					<div class="contactanos" layout=row layout-xs=column layout-align="center start" >
 						<div ng-include="'app/layout/contacto-formulario.html'" class="contact-form" flex=50 flex-xs=100></div>
-						<div class="mapa" flex=50 flex-xs=100 layout=column>
+						<div class="mapa" flex=50 flex-xs=100 layout=column layout-align-xs="center center">
 							<h1 class="titulo">ENCONTRANOS EN GOOGLE MAPS</h1>
 							<h4 class="subtitulo">Nuestras oficinas</h1>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.6193958408885!2d-64.2567600848538!3d-31.34188268142906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329c1d53921a51%3A0xd329cd05ca81aeb6!2sRicardo+Rojas+6739%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1483536368166" width="500" height="250" frameborder="0" style="border:0; max-width: 100%" allowfullscreen></iframe>

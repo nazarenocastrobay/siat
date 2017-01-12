@@ -493,6 +493,90 @@ footer .container md-content div a{
     color: white;
      font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
 }
+
+
+.cita{
+  background-color: #f2f2f2;
+  margin-top: 4em;
+  padding-top: 2em;
+  padding-bottom: .5em;
+}
+
+.cita .titulo{
+  font-weight: 700;
+  font-size: 2em;
+  color: #0fa5b8;
+  margin-top: 0px;
+  padding-bottom: .3em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+  position: relative;
+}
+.cita .titulo::before{
+    background: #ddd;
+    bottom: 0;
+    content: "";
+    height: 1.5px;
+    left: 0;
+    position: absolute;
+    width: 70px;
+}
+.cita .subtitulo{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: 'Merriweather',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
+  color: rgba(15, 165, 184, 0.4);
+  margin-bottom: 0px;
+}
+.cita .parrafo{
+  font-size: 1.4em;
+  color: #7b7b7b;
+  margin-top: 0px;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+}
+.cita .cita{
+  font-size: 1.4em;
+  color: rgb(220,220,220);
+  margin-top: -5px;
+  padding-bottom: .3em;
+  font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+  text-align: right;
+}
+
+
+.apps{
+  background-color: #096e9c;
+}
+.apps .encabezado{
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-color: rgb(250,250,250);
+}
+.apps > div h6{
+  margin-bottom: .4em;
+}
+.apps > div h4{
+  border-bottom: none;
+}
+.apps .container{
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.apps md-content{
+  background-color: #0fa5b8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .contacto{
  
 }
