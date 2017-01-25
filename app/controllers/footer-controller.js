@@ -8,7 +8,7 @@
     var direcciones = [
             {
                 tipo: 'direccion',
-                icono: 'zmdi zmdi-eye',
+                icono: 'zmdi zmdi-home',
                 valor: ' Av. Ricardo Rojas 6739 Of 1 | Bº Arguello Córdoba - Argentina',
                 href: 'http://maps.google.com/?q=Ricardo Rojas 6739 Córdoba'
             },
@@ -29,6 +29,12 @@
                 icono: 'zmdi zmdi-email',
                 valor: 'info@e-siat.net',
                 href: 'mailto:info@e-siat.net'
+            },
+            {
+                tipo: 'brochure',
+                icono: 'zmdi zmdi-file',
+                valor: 'Brochure',
+                href: 'http://e-siat.net/Siat_Sistema_Integral_de_Adherencia_Terapeutica.pdf'
             }
 
 

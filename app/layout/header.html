@@ -1,43 +1,51 @@
 
       <header  id="home" flex>
       <md-toolbar layout=row  layout-align="space-between center" id="toolbar">
-          <img src="{{APP.header.logo}}" style="width: 100px;" flex-offset=5 alt="{{APP.header.title}}"></img>
-          <div layout=row layout-align="space-between" hide-xs class="navbar-header">
+          <a ng-click="APP.scrollTo('home')" flex-offset=5><img src="{{APP.header.logo}}" style="width: 100px;" alt="{{APP.header.title}}"></img></a>
+          <div layout=row layout-align="space-between" hide-xs hide-sm  show-gt-sm class="navbar-header">
               <md-button ng-click="APP.scrollTo('home')" name="home" du-scrollspy>Home</md-button>
               <md-button ng-click="APP.scrollTo('cartas')" name=acerca du-scrollspy>Acerca</md-button>
               <md-button ng-click="APP.scrollTo('porque')" name="porque" du-scrollspy>Porque</md-button>
-              <md-button ng-click="APP.scrollTo('galeria')" name="galeria" du-scrollspy>Galeria</md-button>
-              <md-button ng-click="APP.scrollTo('contacto')" name="contacto" du-scrollspy>Contact</md-button>
+              <md-button ng-click="APP.scrollTo('contacto')" name="contacto" du-scrollspy>Contacto</md-button>
+              <md-button name="ingresar" ng-href="http://e-siat.net/siat/index.php/login" style="color: #0fa5b8"><i class="zmdi zmdi-key" layout-padding></i>Ingresar</md-button>
           </div>
 
-                    <md-button ng-click="APP.toggleLeft()" class="zmdi zmdi-menu"  hide-gt-xs >
+                    <md-button ng-click="APP.toggleLeft()" class="zmdi zmdi-menu"  hide-gt-sm show-sm show-xs >
                     </md-button>
 
-
+            
             </section>
       </md-toolbar>
        <!--  <div style="width: 50%; height: 350px;"> -->
-          <div ng-carousel ng-carousel-name="example-carousel1" ng-carousel-timer="3500" layout=row layout-align="center start " flex=100 style="background-color: transparent;">
-              <slidecontainer class="carousel-slides">
-                  <slide class="carousel-example" >
-                    <div layout="row">
-                    <div layout=column layout-align="center start " flex-offset=10 >
-                    <h6>Bienvendio a </h6><h4>Siat</h4>
-                    </div>
-                    </div>
+          <div ng-carousel ng-carousel-name="example-carousel1" ng-carousel-timer="3500"  style="background-color: transparent;" layout=row flex=100 flex-xs=100 flex-sm=100>
+              <slidecontainer class="carousel-slides" >
+                  <slide style="width:100%; background-color: transparent; height: 100%;">
+                      <div layout="column" layout-align="center start" layout-align-xs="start start" flex-offset-xs=5 flex-offset=10>
+                        <h3>Sistema de Adherencia <br> Terapeutica</h3>
+                        <p>Mediante un ecosistema de tecnologías <br> facilitamos la interacción Médico-Paciente <br>y la generación de estadísticas <br> para mejorar el tratamiento.</p>
+                        <md-button class="md-raised" ng-click="APP.scrollTo('about')">VER MAS</md-button>
+                      </div>
                   </slide>
-                  <slide class="carousel-example">
-                    <div layout=column layout-align="center start " flex-offset=10 >
-                    <h6 style="font-size: 1.7em; text-align: justify; "> Una herramienta para el<br> seguimiento de los trata-<br>mientos de pacientes <br>con patologias cronicas,<br>  con el fin de mejorar la<br> adherencia terapeutica</h6>
-                    </div>
+                  <slide style="width:100%; background-color: transparent; height: 100%;">
+                      <div layout="column" layout-align="center start" layout-align-xs="start start" flex-offset-xs=5 flex-offset=10>
+                        <h3>Acompañamos al <br> paciente en su <br>tratamiento crónico</h3>
+                        <p >La clave de la adherencia terapéutica <br> es el apego del paciente. <br>Siat acompaña y facilita esta tarea <br>para una mejor calidad de vida.</p>
+                        <md-button class="md-raised" ng-click="APP.scrollTo('terapia')">VER MAS</md-button>
+                      </div>
                   </slide>
-                  <!-- <slide class="carousel-example">Slide 3</slide>
-                  <slide class="carousel-example">Slide 4</slide>
-                  <slide class="carousel-example">Slide 5</slide>
-                  <slide class="carousel-example">Slide 6</slide> -->
-              </slidecontainer>
+                  <slide style="width:100%; background-color: transparent; height: 100%;">
+                      <div layout="column" layout-align="center start" layout-align-xs="start start" flex-offset-xs=5 flex-offset=10>
+                        <h3>Generación y  gestión <br>de documentos <br> de reintegro</h3>
+                        
+                      </div>
+                  </slide>
+                  <!-- <slide style="width:100%; background-color: white; height: 100%;"></slide> -->
           </div>
+          <md-button class="go-down md-fab" ng-click="APP.scrollTo('cartas')"><i class="zmdi zmdi-chevron-down"></i></md-button>
+          <md-button class="go-down md-fab" ng-click="APP.scrollTo('about')" show-xs hide-gt-xs><i class="zmdi zmdi-chevron-down"></i></md-button>
         <!-- </div> -->
+
+        <!-- SIDE NAV EN CELULARES/TABELTS -->
         <md-sidenav class="md-sidenav-left" md-component-id="left"
                           md-disable-backdrop md-whiteframe="4" style="position: fixed">
 
@@ -48,10 +56,10 @@
                 <md-content layout-margin>
                   <div layout=column layout-align="space-around">
                     <md-button ng-click="APP.scrollToSidenav('home')" name=home>Home</md-button>
-                    <md-button ng-click="APP.scrollToSidenav('cartas')" name=acerca>Acerca</md-button>
+                    <md-button ng-click="APP.scrollToSidenav('acerca')" name=acerca>Acerca</md-button>
                     <md-button ng-click="APP.scrollToSidenav('porque')" name=porque>Porque</md-button>
-                    <md-button ng-click="APP.scrollToSidenav('galeria')" name=porque>Galeria</md-button>
                     <md-button ng-click="APP.scrollToSidenav('contacto')" name=contacto>Contacto</md-button>
+                    <md-button name="ingresar" ng-href="http://e-siat.net/siat/index.php/login" style="color: #0fa5b8" ><i class="zmdi zmdi-key" layout-padding></i>Ingresar</md-button></md-button>
                 </div>
                   <md-button ng-click="APP.toggleLeft()" class="md-accent">
                     CERRAR

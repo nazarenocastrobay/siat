@@ -14,14 +14,42 @@
         </md-button>
 
 
-		 <section class="cartas" ng-controller="serviciosCtrl as servicios" id="cartas">
-		 		<div class="container">
+		 <section class="cartas" ng-controller="serviciosCtrl as servicios" id="cartas" hide-xs>
+		 		<div class="container" show-xs hide-sm show-gt-sm>
 				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" >
 					<md-list-item ng-repeat="servicio in servicios.servicios" class="servicios-items" flex flex-xs=95 flex-sm=50>
 						<i class="{{servicio.icono}} servicios-items-icono md-accent"></i>
 						<h4>{{servicio.nombre}}</h4>
 						<div  layout=column layout-align="start center">
-						<md-button class="md-primary md-raised" ng-click="servicios.showAdvanced($index)" style="z-index: 1;" id="boton-servicio">
+						<md-button class="md-primary md-raised" ng-click="servicios.scrollTo($index)" style="z-index: 1;" id="boton-servicio">
+							      MAS
+							    </md-button>
+							<p flex-order="-1">{{servicio.descripcion.breve}}</p>
+						</div>
+					</md-list-item>
+				</md-list>
+				</div>
+
+				<!-- LISTA EN CUADRICULAS PARA PANTALLAS SMALL -->
+				<div class="container" hide-xs show-sm hide-gt-sm>
+				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column">
+					<md-list-item ng-repeat="servicio in servicios.serviciosRow1" class="servicios-items" flex flex-xs=95 flex-sm=50>
+						<i class="{{servicio.icono}} servicios-items-icono md-accent"></i>
+						<h4>{{servicio.nombre}}</h4>
+						<div  layout=column layout-align="start center">
+						<md-button class="md-primary md-raised" ng-click="servicios.scrollToRow1($index)" style="z-index: 1;" id="boton-servicio">
+							      MAS
+							    </md-button>
+							<p flex-order="-1">{{servicio.descripcion.breve}}</p>
+						</div>
+					</md-list-item>
+				</md-list>
+				<md-list  layout="row" layout-align="center" class="servicios" layout-xs="column" show-sm>
+					<md-list-item ng-repeat="servicio in servicios.serviciosRow2" class="servicios-items" flex flex-xs=95 flex-sm=50>
+						<i class="{{servicio.icono}} servicios-items-icono md-accent"></i>
+						<h4>{{servicio.nombre}}</h4>
+						<div  layout=column layout-align="start center">
+						<md-button class="md-primary md-raised" ng-click="servicios.scrollToRow2($index)" style="z-index: 1;" id="boton-servicio">
 							      MAS
 							    </md-button>
 							<p flex-order="-1">{{servicio.descripcion.breve}}</p>
@@ -34,9 +62,9 @@
 		<section class="about" id="about">
 			<div class="container">
 
-			<md-content layout="row" layout-xs="column" layout-sm="column">
-				<img src="assets/img/about-siat.jpg" alt="" flex>
-				<div flex=50 flex-xs=95 flex-sm=40 class="about-parrafos">
+			<md-content layout="row" layout-xs="column" layout-sm="column" layout-align-sm="center center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/NiPMMHzdEUg" frameborder="0" allowfullscreen flex=50 flex-xs=100 flex-sm=100 style="padding-bottom: 2em;" id="video"></iframe>
+				<div flex=50 flex-xs=95 flex-sm=40 class="about-parrafos" flex-offset-gt-sm=5>
 					<h6 class="subtitulos">Acerca de Siat</h6>
 					<h4 class="titulos">¿QUE ES SIAT?</h4>
 					<p>SISTEMA INTEGRAL DE ADHERENCIA TERAPÉUTICA es un ecosistema de tecnologías aplicada a las 5 dimensiones de exploración según la OMS con el objetivo de mejorar el grado de adherencia terapéutica de las diferentes enfermedades crónicas. <br> El uso de las TIC ha sido bien aceptado por médicos especialistas y también por los pacientes que padecen enfermedades crónicas para aumentar su seguimiento, interacción médico-paciente y generar un monitoreo con trazabilidad del tratamiento en tiempo real.</p>
@@ -44,7 +72,7 @@
 			</md-content>
 			</div>
 			<md-content class="adherencia" >
-			  <div class="container" class="md-whiteframe-2dp">
+			  <div class="container" class="md-whiteframe-2dp" id="terapia">
 			  	<h2 class="subtitulo">DEFINICION</h2>
 				<h1 class="titulo">ADHERENCIA TERAPEUTICA</h1>
 				<div layout="row" layout-xs=column>
@@ -54,25 +82,24 @@
 					del modo de vida) se corresponde con las recomendaciones
 					acordadas de un prestador de asistencia sanitaria." (Haynes y Rand)</p>
 					</div>
-						<i class="zmdi zmdi-quote" style="font-size: 10em; color: rgba(255,255,255,.8); text-align: right;"></i>
+						<i class="zmdi zmdi-quote" style="font-size: 10em; color: #ddd; text-align: right;"></i>
 				</div>
 			  </div>
 			  
 			</md-content>
 		</section>
 
-		<section class="porque" ng-controller="porqueCtrl as porque" id="porque">
-		
-				<div class="encabezado">
-						<h6 class="subtitulos text-center">El porque</h6>
-						<h4 class="titulos text-center">PORQUE SIAT</h4>
-				</div>
+		<div class="encabezado"  id="porque">
+			<h6 class="subtitulos text-center">BENEFICIOS</h6>
+			<h4 class="titulos text-center">PORQUE SIAT</h4>
+		</div>
+		<section class="porque" ng-controller="porqueCtrl as porque">
 					<div class="md-whiteframe-8dp">
-					<md-content layout="row" layout-xs="column" layout-sm="column">
-						<div class="porque-img-izq" flex=50 flex-xs=100 flex-md=50 flex-sm=50></div>
+					<md-content layout="row" layout-xs="column" layout-sm="column" id="paciente">
+						<div class="porque-img-paciente" flex=50 flex-xs=100 flex-md=50 flex-sm=50 layout-fill></div>
 						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-xs=100 flex-md=50 flex-sm=50>
-							<h4 flex-offset=20 flex-offset-xs=5>PARA EL</h4>
-							<h1 flex-offset=20 class="titulo" flex-offset-xs=5>{{porque.porque[0].para | uppercase}}</h1>
+							<h4 flex-offset=10 flex-offset-xs=10>PARA EL</h4>
+							<h1 flex-offset=10 class="titulo" flex-offset-xs=10>{{porque.porque[0].para | uppercase}}</h1>
 							<div class="porque-razon" ng-repeat="razones in porque.porque[0].razones" layout=row layout-padding flex-offset=5 layout-align="start center">
 								<div class="porque-razon-icono">
 									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
@@ -85,11 +112,11 @@
 						</div>
 					</md-content>
 					</div>
-					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top>
-						<div class="porque-img-der" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
+					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top id="medico">
+						<div class="porque-img-medico" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
 						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-order="-1" flex-order-sm="1" flex-order-xs="1" flex-xs=10 flex-md=50 flex-sm=50>
-							<h4 flex-offset=30 flex-offset-xs=5>PARA EL</h4>
-							<h1 flex-offset=30 class="titulo" flex-offset-xs=5>{{porque.porque[1].para | uppercase}}</h1>
+							<h4 flex-offset=20 flex-offset-xs=10 flex-offset-sm=10>PARA EL</h4>
+							<h1 flex-offset=20 class="titulo" flex-offset-xs=10 flex-offset-sm=10>{{porque.porque[1].para | uppercase}}</h1>
 							<div class="porque-razon" ng-repeat="razones in porque.porque[1].razones" layout=row layout-padding flex-offset=15 flex-offset-xs=5 flex-offset-sm=5 layout-align="start center" >
 								<div class="porque-razon-icono">
 									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
@@ -98,9 +125,44 @@
 									<h1>{{razones.razon | uppercase}}</h1>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque faucibus massa, in viverra nunc.</p>
 								</div>
+							</div>
 						</div>
 					</md-content>
-					</div>
+					
+
+					<md-content layout="row" layout-xs="column" layout-sm="column" id="sistema">
+						<div class="porque-img-sistema" flex=50 flex-xs=100 flex-md=50 flex-sm=50 layout-fill></div>
+						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-xs=100 flex-md=50 flex-sm=50>
+							<h4 flex-offset=10 flex-offset-xs=10>PARA EL</h4>
+							<h1 flex-offset=10 class="titulo" flex-offset-xs=10>{{porque.porque[2].para | uppercase}}</h1>
+							<div class="porque-razon" ng-repeat="razones in porque.porque[2].razones" layout=row layout-padding flex-offset=5 layout-align="start center">
+								<div class="porque-razon-icono">
+									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
+								</div>
+								<div class="porque-razon-texto">
+									<h1>{{razones.razon | uppercase}}</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque faucibus massa, in viverra nunc.</p>
+								</div>
+							</div>
+						</div>
+					</md-content>
+
+					<md-content layout="row" layout-align="space-between stretch"  layout-xs="column" layout-sm="column" layout-padding-top id="laboratorio">
+						<div class="porque-img-laboratorio" flex=50  flex-xs=100 flex-md=50 flex-sm=50></div>
+						<div class="porque-razones" flex=40 layout=column layout-align="center strech" flex-order="-1" flex-order-sm="1" flex-order-xs="1" flex-xs=10 flex-md=50 flex-sm=50>
+							<h4 flex-offset=20 flex-offset-xs=10 flex-offset-sm=10>PARA EL</h4>
+							<h1 flex-offset=20 class="titulo" flex-offset-xs=10 flex-offset-sm=10> {{porque.porque[3].para | uppercase}}</h1>
+							<div class="porque-razon" ng-repeat="razones in porque.porque[3].razones" layout=row layout-padding flex-offset=15 flex-offset-xs=5 flex-offset-sm=5 layout-align="start center" >
+								<div class="porque-razon-icono">
+									<i class="{{razones.icono}} md-whiteframe-2dp"></i>
+								</div>
+								<div class="porque-razon-texto">
+									<h1>{{razones.razon | uppercase}}</h1>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque faucibus massa, in viverra nunc.</p>
+								</div>
+							</div>
+						</div>
+					</md-content>
 		</section>
 		<md-content class="cita" >
 			<div class="container" layout=row layout-xs=column layout-align="center center" layout-sm=column>
@@ -128,7 +190,7 @@
 				height: 100%;
 			}
 		</style>
-		<section class="galeria" id="galeria">
+		<!-- <section class="galeria" id="galeria" ng-controller="galeriaCtrl as galeria">
 				<div class="encabezado">
 						<h6 class="subtitulos text-center">NUESTRA</h6>
 						<h4 class="titulos text-center">GALERIA</h4>
@@ -136,83 +198,25 @@
 				<div class="container">
 					<md-grid-list
 				        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="3"
-				        md-row-height-gt-md="4:2" md-row-height="2:2"
+				        md-row-height-gt-md="4:2" md-row-height="4:2"
 				        md-gutter="2em" md-gutter-gt-sm="20px"  >
 
-				    <md-grid-tile class="gray"
-				        md-rowspan="2" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
+					    <md-grid-tile class="gray"
+					        md-rowspan="{{foto.mdRow}}" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-repeat="foto in galeria.galeria">
+					        <figure layout-padding>
+						        <div style="background-image: url(assets/img/{{foto.imagen}}); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
+						        <div class="overlay">
+						      		<h1 class="titulo-img">{{foto.titulo | uppercase}}</h1>
+						      		<md-button class="md-raised" style="top: {{foto.top}}" ng-click="galeria.showAdvanced($index)"><i class="zmdi zmdi-fullscreen"></i></md-button>
+						        </div>
+						        </div>
+					        </figure>
+					    </md-grid-tile>
 
-				    <md-grid-tile class="green" md-rowspan="1" layout-padding>
-				    	<figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay">
-					        </div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="yellow" md-rowspan="2" layout-padding>
-				    	<figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="blue"
-				        md-rowspan="2" layout-padding>
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="red"
-				        md-rowspan="2" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" layout-padding>
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="green"
-				        md-rowspan="1" layout-padding >
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="green"
-				        md-rowspan="1" layout-padding >
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
-
-				    <md-grid-tile class="green"
-				        md-rowspan="1" layout-padding >
-				        <figure layout-padding>
-					        <div style="background-image: url(assets/img/bg-background.png); position: relative; height: 100%; width: 100%; padding: 0;" class="img-gallery">
-					        <div class="overlay"></div>
-					        </div>
-				        </figure>
-				    </md-grid-tile>
 
 				  </md-grid-list>
 			  </div>
-		</section>
+		</section> -->
 
 		<section class="contacto" id="contacto">
 				<div class="encabezado">
@@ -220,9 +224,9 @@
 						<h4 class="titulos text-center">CONTACTANOS</h4>
 				</div>
 				<div class="container">
-					<div class="contactanos" layout=row layout-xs=column layout-align="center start" >
-						<div ng-include="'app/layout/contacto-formulario.html'" class="contact-form" flex=50 flex-xs=100></div>
-						<div class="mapa" flex=50 flex-xs=100 layout=column layout-align-xs="center center">
+					<div class="contactanos" layout=row layout-xs=column layout-align="center start" layout-align-xs="center center" layout-sm=column layout-align-sm="center center">
+						<div ng-include="'app/layout/contacto-formulario.html'" class="contact-form" flex=50 flex-xs=100 flex-sm=100></div>
+						<div class="mapa" flex=50 flex-xs=100 layout=column  flex-sm=100>
 							<h1 class="titulo">ENCONTRANOS EN GOOGLE MAPS</h1>
 							<h4 class="subtitulo">Nuestras oficinas</h1>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.6193958408885!2d-64.2567600848538!3d-31.34188268142906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329c1d53921a51%3A0xd329cd05ca81aeb6!2sRicardo+Rojas+6739%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1483536368166" width="500" height="250" frameborder="0" style="border:0; max-width: 100%" allowfullscreen></iframe>

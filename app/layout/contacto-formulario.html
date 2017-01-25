@@ -1,31 +1,31 @@
 <div ng-controller="contactCtrl as contact" layout="column" ng-cloak>
 
 			  <md-content layout-padding class="contact-form-contenido" flex>
-			    <form name="projectForm" md-theme="secondary" >
+			    <form name="projectForm" md-theme="secondary" ng-submit="processForm()">
 
 			      <h1 class="titulo">ESCIBENOS!</h1>
 				  <h4 class="subtitulo">Completa el formulario</h4>
 			      <div layout="row">
-			        <md-input-container flex="50">
+			        <md-input-container flex="50" flex-xs=100>
 			          <label>Nombre</label>
-			          <input required name="nombreCliente" ng-model="contact.nombreCliente">
+			          <input required name="nombreCliente" ng-model="formData.name">
 			          <div ng-messages="contact.nombreCliente.$error">
 			            <div ng-message="required">Requerido.</div>
 			          </div>
 			        </md-input-container>
 
-			        <md-input-container flex="50">
+			        <md-input-container flex="50" flex-xs=100>
 			          <label>Apellido</label>
-			          <input required name="apellidoCliente" ng-model="contact.apellidoCliente">
+			          <input requiered name="apellidoCliente" ng-model="formData.apellido">
 			          <div ng-messages="contact.apellidoCliente.$error">
-			            <div ng-message="required">Requerido.</div>
+			          	<div ng-message="required">Requerido.</div>
 			          </div>
 			        </md-input-container>
 			        </div>
 
 					<md-input-container class="md-block">
 				        <label>Email</label>
-				        <input required type="email" name="emailCliente" ng-model="contact.emailCliente"
+				        <input required type="email" name="email" ng-model="formData.email"
 				               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
 
 				        <div ng-messages="contact.emailCliente.$error" role="alert">
@@ -34,9 +34,21 @@
 				          </div>
 				        </div>
 				      </md-input-container>
+
+				      <md-input-container class="md-block">
+				        <label>Asunto</label>
+				        <input required name="email" ng-model="formData.asunto"
+				               minlength="2" maxlength="100"/>
+
+				        <div ng-messages="contact.emailCliente.$error">
+				          <div ng-message="required">
+				            Requerido.
+				          </div>
+				        </div>
+				      </md-input-container>
 			      <md-input-container class="md-block">
 			          <label>Mensaje</label>
-			          <textarea ng-model="contact.mensaje" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+			          <textarea ng-model="formData.content" md-maxlength="150" rows="5" md-select-on-focus name="text"></textarea>
 			        </md-input-container>
 
 					<md-button type="submit">Enviar</md-button>

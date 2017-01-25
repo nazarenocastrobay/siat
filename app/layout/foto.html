@@ -1,0 +1,25 @@
+<md-dialog aria-label="{{foto.titulo}}" flex=60 flex-xs=95>
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{foto.titulo}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="foto.cancel()">
+          <i class="zmdi zmdi-close" style="color: white; font-size: 1.5em;" aria-label="close dialog"></i>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content class="galeria-foto">
+      <img src="assets/img/{{foto.imagen}}">
+    </md-dialog-content>
+
+      <!-- <md-button ng-click="answer('not useful')">
+       Not Useful
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Useful
+      </md-button> -->
+    </md-dialog-actions>
+  </form>
+</md-dialog>

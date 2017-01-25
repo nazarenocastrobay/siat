@@ -42,7 +42,10 @@
       text-align: center;
     }
   #icono-brochure{
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
 
   }
   .icono-brochure{
@@ -50,10 +53,19 @@
     display: none;
   }
   #icono-scrolltop{
-    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
     background-color: white;
     position: absolute;
-    top: -35px; left: 44%;
+    top: -35px; 
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
     z-index: 0;
   }
   #icono-scrolltop i{
@@ -66,13 +78,18 @@
     
 /****************HEADER*************/
   header{
-    background: url('../img/bg-background.png') center center no-repeat;
+    background: url('../img/bg-header.png') center center no-repeat;
     background-size: cover;
+    background-position: 0% 75%;
     height: 780px;
+    position: relative;
+  }
+  header a:hover{
+    cursor: pointer;
   }
   md-toolbar{
     transition: all .4s ease-in-out;
-    background-color: transparent !important;
+    background-color: white !important;
   }
   md-toolbar > h1 {
     margin-left: 2em;
@@ -85,8 +102,72 @@
     border-bottom: none !important;
     
   }
+  header .go-down{
+    background: rgba(255,255,255,1) !important;
+    border-radius: 50%;                
+    font-size: 34px;
+    height: 40px;
+    line-height: 20px !important;
+    text-align: center;
+    width: 40px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    font-size: 2em !important;
+    z-index: 1 !important;
+    box-shadow: none !important;
+  } 
+  header .go-down i{
+     color: #084f58;
+     transition: .3s all ease-in-out;
+     -webkit-transition: .3s all ease-in-out;
+     -o-transition: .3s all ease-in-out;
+     -ms-transition: .3s all ease-in-out;
+  }
+  header .go-down:hover i{
+     color: #2cc1bf;
+  } 
+  /******BOTON DOWN BREACKPOINTS******/
+  @media (max-width: 330px){
+    header{
+      height: 600px;
+    }
+    header .go-down{
+      top: 80%;
+    }
+  }
+  @media (min-width: 330px) and (max-width: 600px) {
+    header .go-down{
+      top: 70%;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 900px) {
+    header .go-down{
+      top: 86%;
+    }
+  }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    header .go-down{
+      top: 86%;
+    }
+  }
+  @media (min-width: 1200px) {
+    header .go-down{
+      top: 87%;
+    }
+  }
+
+
+
+
+  /**********SIDENAV CELULARES/TABLETS****************/
   .navbar-header button{
-    color: white !important;
+    color: #626262 !important;
   }
   .fixed{
     position: fixed !important;
@@ -121,6 +202,8 @@
     font-weight: bold;
     text-transform: uppercase;
   }
+  
+
 /**********SLIDER**********/
 button.demo-nav {
     margin-top: 130px;
@@ -128,10 +211,11 @@ button.demo-nav {
 .ng-carousel{
   height: 100%;
   background-color: black;
+  width: 100%;
 
 }
 .ng-carousel slide {
-    background-color: transparent;
+    background: none;
    
 }
 .ng-carousel slide h6{
@@ -171,6 +255,41 @@ button.demo-nav {
   margin-bottom: 0;
   margin-top: 0;
 }
+slide div h3{
+ font-size: 2em;
+ font-weight: bold;
+ color: white !important;
+}
+slide div p{
+  font-size: 1em;
+  color: white !important;
+}
+
+
+    /**MEDIA QUERY CELULAR MEDIANO/GRANDE**/
+  @media (min-width: 330px) and (max-width: 600px) {
+     slide div h3{
+        font-size: 2em;
+        font-weight: bold;
+        padding-top: 3em;
+      }
+      slide div p{
+       font-size: 1em;
+      }
+    }
+    /*MEDIA QUERY CELULAR CHICO*/
+   @media (max-width: 330px){
+      slide div h3{
+        font-size: 1.3em;
+        font-weight: bold;
+        padding-top: 3em;
+      }
+      slide div p{
+        font-size: .8em;
+      }
+
+    }
+
 /****************FOOTER*************/
 footer{
   background-color:#084f58;
@@ -261,13 +380,38 @@ footer .container md-content div a{
         text-align: center;
         position:relative;
         height: 250px;
-        transition: all .4s ease-out;
+        -webkit-transition: all .4s ease-out;
+        -moz-transition: all .4s ease-out;
+        -o-transition: all .4s ease-out;
+        -ms-transition: all .4s ease-out;
         overflow: hidden;
       }
+
+  @media (max-width: 900px) {
+    .servicios-items{
+    padding-top: 0;
+    border-right: #fff 0px solid; 
+    display: block;
+    text-align: center;
+    position: relative;
+    height: 250px;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    overflow: hidden;
+    margin: 1em;
+    box-shadow: 0px 0px 10px gainsboro;
+    background-color: rgba(253, 253, 253, 0.4);
+    }
+  }
       .servicios-items h4 {
          text-transform: uppercase;
          color: black;
-         transition: all .4s ease-out;
+         -webkit-transition: all .4s ease-out;
+          -moz-transition: all .4s ease-out;
+          -o-transition: all .4s ease-out;
+          -ms-transition: all .4s ease-out;
          font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif;
          font-weight: bold;
       }
@@ -293,7 +437,10 @@ footer .container md-content div a{
         position: absolute;
         width: 100%;
         padding: 0 20px;
-        transition: .4s all ease-out;
+        -webkit-transition: all .4s ease-out;
+          -moz-transition: all .4s ease-out;
+          -o-transition: all .4s ease-out;
+          -ms-transition: all .4s ease-out;
       }
       .servicios-items div p{
         color: white;
@@ -323,8 +470,8 @@ footer .container md-content div a{
 /****************ABOUT SIAT*************/
  .about{
   background-color: rgb(250,250,250);
-  padding-top: 7em;
-  padding-bottom: 5em;
+  padding-top: 3em;
+  padding-bottom: 1em;
  }
     .about md-content img{
       padding-right: 2em;
@@ -371,16 +518,16 @@ footer .container md-content div a{
 
 /****************ADHERENCIA*************/
 .adherencia{
-  background-color: #0fa5b8;
+  background-color: #f2f2f2;
   margin-top: 4em;
-  padding-top: 2em;
-  padding-bottom: .5em;
+  padding-top: .1em;
+  padding-bottom: 0em;
 }
 
     .adherencia .titulo{
       font-weight: 700;
       font-size: 2em;
-      color: white;
+      color: #0fa5b8;
       margin-top: 0px;
       padding-bottom: .3em;
       font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
@@ -388,6 +535,7 @@ footer .container md-content div a{
     }
     .adherencia .titulo::before{
         background: #ddd;
+        color: rgba(15, 165, 184, 0.4);
         bottom: 0;
         content: "";
         height: 1.5px;
@@ -402,17 +550,17 @@ footer .container md-content div a{
       font-family: 'Merriweather',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
       color: #adadad;
       margin-bottom: 0px;
-      color: rgba(255,255,255,.6);
+      color: #ddd;
     }
     .adherencia .parrafo{
       font-size: 1.4em;
-      color: rgb(220,220,220);
+      color: #7b7b7b;
       margin-top: 0px;
       font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
     }
     .adherencia .cita{
       font-size: 1.4em;
-      color: rgb(220,220,220);
+      color: #b2deea;
       margin-top: -5px;
       padding-bottom: .3em;
       font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
@@ -422,22 +570,32 @@ footer .container md-content div a{
 
 
 
-
 /****************PORQUE SIAT*************/
+.encabezado{
+      padding-top: 2em;
+      padding-bottom: 2em;
+      background-color: rgb(250,250,250);
+    }
+    .encabezado  div h6{
+      margin-bottom: .4em;
+    }
+    .encabezado   h4{
+      border: none;
+    }
+    .encabezado .titulos::before{
+          background: #ddd;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: calc(50% - 35px);
+        position: absolute;
+        width: 70px;
+    }
+
 .porque{
   background-color: #096e9c;
 }
-    .porque .encabezado{
-      padding-top: 3em;
-      padding-bottom: 3em;
-      background-color: rgb(250,250,250);
-    }
-    .porque > div h6{
-      margin-bottom: .4em;
-    }
-    .porque > div h4{
-      border-bottom: none;
-    }
+    
     .porque .container{
       padding-top: 3em;
       padding-bottom: 3em;
@@ -445,22 +603,35 @@ footer .container md-content div a{
     .porque md-content{
       background-color: #0fa5b8;
     }
-    .porque-img-izq{
+    .porque-img-paciente{
       background: url('../img/porque-paciente.jpg') center center no-repeat;
       background-size: cover;
       height: 600px;
     }
-    .porque-img-der{
+    .porque-img-medico{
       background: url('../img/porque-medico.jpg') center center no-repeat;
       background-size: cover;
       height: 600px;
     }
+    .porque-img-sistema{
+      background: url('../img/porque-sistema.jpg') center center no-repeat;
+      background-size: cover;
+      height: 600px;
+    }
+    .porque-img-laboratorio{
+      background: url('../img/porque-laboratorio.jpg') center center no-repeat;
+      background-size: cover;
+      height: 600px;
+    }
+    .porque-razones{
+      padding-top: 0em;
+    }
     .porque-razones .titulo{
-      font-size: 4em;
+      font-size: 2.5em;
         color: white;
          font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
          font-weight: bold;
-         margin-top: -14px;
+         margin-top: -7px;
          margin-bottom: 14px;
     }
     .porque-razones h4{
@@ -470,7 +641,6 @@ footer .container md-content div a{
       font-family: 'Merriweather',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
       color: #39687d;
       margin-bottom: 0px;
-      padding-top: 3em;
     }
     .porque-razon .porque-razon-icono i{
         background: #ffffff;
@@ -493,6 +663,28 @@ footer .container md-content div a{
         color: white;
          font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important;
     }
+    @media (min-width: 330px) and (max-width: 600px){
+        .porque-razones{
+          padding-top: 1.5em;
+        }
+        .porque-razones h4{
+        margin-top: 0px;
+      }
+        .porque-razon .porque-razon-texto h1{
+            font-size: 1em;
+            color: white;
+          }
+          .porque-razon .porque-razon-texto p{
+            font-size: .8em;
+          }
+    }
+    @media (min-width: 600px) and (max-width: 900px){
+      .porque-razones{
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+    }
+
 
 /****************CITA*************/
 .cita{
@@ -542,15 +734,24 @@ footer .container md-content div a{
       font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
       text-align: right;
     }
-
+    @media (max-width: 330px) {
+      .cita .parrafo{
+      font-size: 1em;
+      }
+    }
+    @media (min-width: 330px) and(max-width: 600px) {
+      .cita .parrafo{
+      font-size: 1.3em;
+      }
+    }
 /****************GALERIA*************/
 .galeria{
         background-color: #fafafa;
-        padding-bottom: 3em;
+        padding-bottom: 0em;
   }
       .galeria .encabezado{
-        padding-top: 3em;
-        padding-bottom: 3em;
+        padding-top: 1em;
+        padding-bottom: 0em;
         background-color: rgb(250,250,250);
       }
       .galeria > div h6{
@@ -571,11 +772,13 @@ footer .container md-content div a{
       .galeria .container md-grid-tile{
         background-color: white;
       }
-      
       .galeria .container md-grid-tile{
         box-shadow: 3px 4px 7px rgba(230,230,230,1);
           border-radius: 5px;
-          transition: all .2s ease-out
+          -webkit-transition: all .2s ease-out;
+          -moz-transition: all .2s ease-out;
+          -o-transition: all .2s ease-out;
+          -ms-transition: all .2s ease-out
       }
       .galeria .container md-grid-tile figure .img-gallery{
         background-size: cover;
@@ -584,12 +787,51 @@ footer .container md-content div a{
       }
       .galeria .container md-grid-tile .overlay{
         background-color: #0fa5b8;
-        opacity: .8;
         height: 100%; 
         width: 100%;
-        transform: scale(0);
         border-radius: 100%;
-        transition: all .15s ease-out;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -o-transform: scale(0);
+        -ms-transform: scale(0);
+        -webkit-transition: all .15s ease-out;
+        -moz-transition: all .15s ease-out;
+        -o-transition: all .15s ease-out;
+        -ms-transition: all .15s ease-out;
+      }
+      .galeria .container md-grid-tile .overlay .titulo-img{
+        font-size: 1.7em;
+      color: #fafafa;
+      margin-top: 0px;
+      font-family: 'Open Sans',"Helvetica Neue","Helvetica","Arial",sans-serif !important; 
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin-top: 0px;
+      }
+      .galeria .container md-grid-tile .overlay button{
+         font-size: 2em;
+          line-height: 40px;
+          min-width: 0;
+          width: 40px;
+          height: 40px;
+          vertical-align: middle;
+          color: #0a7886;
+          border-radius: 50%;
+            position: absolute;
+            top: 60%;
+            left: 47%;
+            -webkit-transform: translate(-50%, -75%);
+            -moz-transform: translate(-50%, -75%);
+            -ms-transform: translate(-50%, -75%);
+            -o-transform: translate(-50%, -75%);
+            transform: translate(-50%, -75%);
+            margin-top: 0px;
       }
       .galeria .container md-grid-tile:hover{
         box-shadow: 10px 8px 10px rgba(220,220,220,1);
@@ -598,10 +840,15 @@ footer .container md-content div a{
       .galeria .container md-grid-tile:hover .overlay{
         height: 100%; 
         width: 100%;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
         border-radius: 0%;        
       }
-
+  .galeria-foto img{
+    max-width: 100%;
+  }
 
 
 
@@ -615,9 +862,8 @@ footer .container md-content div a{
  
 }
     .contacto .encabezado{
-      padding-top: 8em;
-      padding-bottom: 7em;
-      background-color: #f2f2f2;
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
     .contacto .encabezado h6{
       margin-bottom: .4em;
