@@ -10,7 +10,7 @@
                     icono: 'zmdi zmdi-male-alt',
                     titulo: 'titulo1',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Auto evaluación de adherencia terapéutica, contención y seguimiento...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'paciente'
@@ -20,7 +20,7 @@
                     icono: 'zmdi zmdi-account-box-o',
                     titulo: 'titulo2',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Mayor comunicación Médico-Paciente, alerta de dosis...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'medico'
@@ -30,7 +30,7 @@
                     icono: 'zmdi zmdi-hospital',
                     titulo: 'titulo3',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Auditoría y gestión digital de documentos...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'sistema'
@@ -40,19 +40,21 @@
                     icono: 'zmdi zmdi-lamp',
                     titulo: 'titulo4',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Innovación tecnológica, Análisis estadístico de datos...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'laboratorio'
                 }
             ];
+
+            // servicios en tablets (2 filas en vez de 4)
             self.serviciosRow1 = [
                 {
                     nombre: 'paciente',
                     icono: 'zmdi zmdi-male-alt',
                     titulo: 'titulo1',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Auto evaluación de adherencia terapéutica, contención y seguimiento...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'paciente'
@@ -62,7 +64,7 @@
                     icono: 'zmdi zmdi-account-box-o',
                     titulo: 'titulo2',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Mayor comunicación Médico-Paciente, alerta de dosis...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'medico'
@@ -74,7 +76,7 @@
                     icono: 'zmdi zmdi-hospital',
                     titulo: 'titulo3',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Auditoría y gestión digital de documentos...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'sistema'
@@ -84,7 +86,7 @@
                     icono: 'zmdi zmdi-lamp',
                     titulo: 'titulo4',
                     descripcion: {
-                        breve: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        breve: 'Innovación tecnológica, Análisis estadístico de datos...',
                         larga: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique pretium sapien eget egestas. Quisque egestas nibh eget nunc commodo, non fermentum elit tristique. Vestibulum ut turpis id nunc ornare lobortis. Mauris imperdiet eros elementum lectus dapibus, vitae eleifend enim commodo. Donec malesuada nisl arcu, vel sagittis urna ultricies eget.'
                     },
                     id: 'laboratorio'
